@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211601742260",
+    "project_id": "energymeter-e5e9b",
+    "storage_bucket": "energymeter-e5e9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211601742260:android:b1c319aff2d1a7c8e73ae1",
+        "android_client_info": {
+          "package_name": "com.example.uom_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211601742260-v3abrgt9mgilerev7l6hpdref1g6an2d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeenN3ryMG3OZaCLe6GuTpuDPeooRvVZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211601742260-v3abrgt9mgilerev7l6hpdref1g6an2d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

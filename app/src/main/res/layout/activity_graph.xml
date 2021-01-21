@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="500dp"
+        android:layout_height="600dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="FROM:"
+
+            android:textSize="25dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textColor="@color/mangocolor"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:hint="Enter Date"
+            android:layout_marginRight="70dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="TO:"
+
+            android:textSize="25dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textColor="@color/mangocolor"/>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:hint="Enter Date"
+            android:layout_marginRight="70dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="#6D80B9"
+        android:text="Generate"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        />
+
+
+</LinearLayout>
