@@ -7,34 +7,24 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     >
+    <include
+        layout="@layout/app_bar_main1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <ImageButton
-        android:id="@+id/menuButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:foregroundGravity="center"
-        android:src="@drawable/ic_baseline_menu_24"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="1"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginBottom="532dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintHorizontal_bias="0.924"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuButton"
-        app:layout_constraintVertical_bias="0"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/dashlight" />
@@ -44,16 +34,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
+        android:layout_marginBottom="640dp"
         android:fontFamily="@font/arbutus_slab"
         android:text="Hello there,"
         android:textColor="@color/mangocolor"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuButton"
-        app:layout_constraintVertical_bias="0.1" />
+
+        />
 
     <TextView
         android:id="@+id/textView12"
@@ -61,35 +52,36 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:text="Nikhil Parekh"
-        android:textStyle="bold"
         android:textColor="@color/colordark"
         android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="175dp"
+        android:layout_marginTop="60dp"
         android:padding="10dp"
-        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:elevation="2dp"
             app:cardElevation="5dp"
-            app:cardMaxElevation="2dp"
-            android:id="@+id/card1">
+            app:cardMaxElevation="2dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -102,34 +94,34 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/t1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:letterSpacing=".05"
                 android:fontFamily="@font/arbutus_slab"
+                android:letterSpacing=".05"
                 android:text="00000"
                 android:textColor="@color/colordark"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:id="@+id/t1"/>
-
+                android:textStyle="bold" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="65dp"
                 android:text="( in kWh )"
                 android:textColor="@color/colordark"
-                android:textSize="12sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="65dp"/>
+                android:textSize="12sp" />
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/dashone"
+                android:layout_marginHorizontal="100dp"
                 android:layout_marginVertical="65dp"
-                android:layout_marginHorizontal="100dp"/>
+                android:src="@drawable/dashone" />
 
 
         </androidx.cardview.widget.CardView>
@@ -154,36 +146,34 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/t2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
-                android:letterSpacing=".05"
                 android:fontFamily="@font/arbutus_slab"
+                android:letterSpacing=".05"
                 android:text="000"
                 android:textColor="@color/colordark"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:id="@+id/t2"/>
-
-
-
+                android:textStyle="bold" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="65dp"
                 android:text="( UNITS )"
                 android:textColor="@color/colordark"
-                android:textSize="12sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="65dp"/>
+                android:textSize="12sp" />
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/dashtwo"
+                android:layout_marginHorizontal="100dp"
                 android:layout_marginVertical="65dp"
-                android:layout_marginHorizontal="100dp"/>
+                android:src="@drawable/dashtwo" />
 
 
         </androidx.cardview.widget.CardView>
@@ -213,41 +203,42 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last Month"
-                android:fontFamily="@font/arbutus_slab"
-                android:textSize="12sp"
-                android:textColor="@color/mangocolor"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00000"
-                android:fontFamily="@font/arbutus_slab"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:letterSpacing=".05"
-                android:textColor="@color/colordark"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:text="Last Month"
+                android:textColor="@color/mangocolor"
+                android:textSize="12sp" />
+
+            <TextView
                 android:id="@+id/t3"
-                />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/arbutus_slab"
+                android:letterSpacing=".05"
+                android:text="00000"
+                android:textColor="@color/colordark"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="65dp"
                 android:text="( in kWh )"
                 android:textColor="@color/colordark"
-                android:textSize="12sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="65dp"/>
+                android:textSize="12sp" />
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/dashthreee"
+                android:layout_marginHorizontal="100dp"
                 android:layout_marginVertical="65dp"
-                android:layout_marginHorizontal="100dp"/>
+                android:src="@drawable/dashthreee" />
         </androidx.cardview.widget.CardView>
-
 
 
         <androidx.cardview.widget.CardView
@@ -256,18 +247,19 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:elevation="2dp"
+            android:id="@+id/card2"
             app:cardElevation="5dp"
             app:cardMaxElevation="2dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Estimated Amount"
-                android:fontFamily="@font/arbutus_slab"
-                android:textSize="12sp"
-                android:textColor="@color/mangocolor"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:fontFamily="@font/arbutus_slab"
+                android:text="Estimated Amount"
+                android:textColor="@color/mangocolor"
+                android:textSize="12sp" />
 
 
             <ImageView
@@ -293,9 +285,9 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/dashfour"
+                android:layout_marginHorizontal="100dp"
                 android:layout_marginVertical="65dp"
-                android:layout_marginHorizontal="100dp"/>
+                android:src="@drawable/dashfour" />
 
         </androidx.cardview.widget.CardView>
 

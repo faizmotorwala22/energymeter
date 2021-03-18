@@ -76,10 +76,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_border"
         android:fontFamily="@font/arbutus_slab"
-        android:drawableStart="@drawable/ic_baseline_mail_24"
+        android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="16dp"
-        android:hint="abc@mail.com"
-        android:inputType="textEmailAddress"
+        android:hint="Full Name"
+
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

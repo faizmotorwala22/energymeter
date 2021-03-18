@@ -35,6 +35,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText e1,e2;
     Button b1;
     SharedPreferences sp;
+    private static final String PREFS_NAME = "preferences";
+    private static final String PREF_UNAME = "Username";
 
 
     @Override
@@ -63,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tex_email = e1.getText().toString();
+                final String tex_email = e1.getText().toString();
                 String tex_password = e2.getText().toString();
                 if (TextUtils.isEmpty(tex_email) || TextUtils.isEmpty(tex_password)){
                     Toast.makeText(LoginActivity.this, "All Fields Required", Toast.LENGTH_SHORT).show();
@@ -71,6 +73,17 @@ public class LoginActivity extends AppCompatActivity {
                 else{
 
                     login(tex_email,tex_password);
+                    SharedPreferences settings = getSharedPreferences(PREFS_NAME,
+                            Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = settings.edit();
+
+                    System.out.println("onPause save name: " + tex_email);
+
+                    editor.putString(PREF_UNAME, tex_email);
+
+                    editor.commit();
+
+
 
                    /* String s=e1.getText().toString();
 
@@ -78,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                     ii.putExtra("name", s);
                     startActivity(ii);*/
 
-                    sp.edit().putBoolean("logged",true).apply();
+
 
                 }
             }
@@ -105,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setIndeterminate(false);
         progressDialog.show();
-        String uRl = "http://192.168.43.77/energymeter/login.php";
+        String uRl = "http://192.168.0.110/energymeter/login.php";
         StringRequest request = new StringRequest(Request.Method.POST, uRl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -113,7 +126,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.equals("Login Success")){
                     Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
 
-
+                    sp.edit().putBoolean("logged",true).apply();
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                     progressDialog.dismiss();
                     finish();

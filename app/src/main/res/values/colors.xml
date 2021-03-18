@@ -10,4 +10,5 @@
     <color name="colordark">#3c2800</color>
     <color name="backcolor">#afb8ff</color>
     <color name="bright_color">#9D37C9</color>
+    <color name="lightblack">#606060</color>
 </resources>

@@ -33,6 +33,7 @@ public class Walkthrough extends AppCompatActivity {
         viewPager = findViewById(R.id.pagerload);
         pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
+
         sp = getSharedPreferences("login", MODE_PRIVATE);
         if (sp.getBoolean("logged", false)) {
             goToMainActivity();

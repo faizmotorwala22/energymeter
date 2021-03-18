@@ -237,7 +237,7 @@ public class graph extends AppCompatActivity implements  AdapterView.OnItemSelec
     private void jsonParse() {
 
 
-        String url = "http://192.168.43.77/energymeter/viewgraph.php";
+        String url = "http://192.168.0.110/energymeter/viewgraph.php";
         final RequestQueue mQueue = Volley.newRequestQueue(getApplicationContext());
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, null,
@@ -421,7 +421,7 @@ public class graph extends AppCompatActivity implements  AdapterView.OnItemSelec
         String add_info_url;
         @Override
         protected void onPreExecute( ) {
-            add_info_url = "http://192.168.43.77/energymeter/viewchart.php";
+            add_info_url = "http://192.168.0.110/energymeter/viewchart.php";
         }
 
 

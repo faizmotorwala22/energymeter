@@ -105,7 +105,7 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setIndeterminate(false);
         progressDialog.show();
-        String uRl = "http://192.168.43.77/energymeter/register.php";
+        String uRl = "http://192.168.0.110/energymeter/register.php";
         StringRequest request = new StringRequest(Request.Method.POST, uRl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

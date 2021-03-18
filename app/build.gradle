@@ -8,10 +8,10 @@ android {
     defaultConfig {
         applicationId "com.example.uom_app"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,7 +45,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:20.0.2'
     compile 'com.google.android.gms:play-services-safetynet:17.0.0'
     implementation 'androidx.browser:browser:1.2.0'
-    implementation 'com.google.firebase:firebase-messaging:17.3.4'
-    implementation 'com.android.support:design:24.2.0'
+   // implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.1.7'
 
 }

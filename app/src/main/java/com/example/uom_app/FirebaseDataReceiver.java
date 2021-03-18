@@ -17,11 +17,16 @@ public class FirebaseDataReceiver extends WakefulBroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         Log.d("BroadcastReceiver::", "BroadcastReceiver");
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(intent.getExtras().getString("title"))
-                .setContentText(intent.getExtras().getString("message"));
+                .setContentText(intent.getExtras().getString("body"));
+
         NotificationManager manager = (NotificationManager) context.getSystemService(NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
+        Log.d("BroadcastReceiver::", "title");
+
+
     }
 }
